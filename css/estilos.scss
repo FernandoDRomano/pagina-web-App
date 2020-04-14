@@ -1,0 +1,180 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/*
+    1. ESTILOS A LA BARRA DE NAVEGACION
+*/
+
+.navbar{
+    background: #4633af !important;
+    li {
+        a{
+            text-decoration: none;
+            padding: .4rem .5rem;
+            color: #eaeaea;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+/*
+    2. ESTILOS AL HERO
+*/
+
+.hero{
+    padding: 5rem 0;
+    background-image: url(../images/section-hero/hero-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/*
+    3. ESTILOS A LAS CARACTERISTICAS
+*/
+
+#features{
+    background-color: lighten(#000000, 15%);
+    .nav-tabs{
+        border-bottom: 0!important;
+        .nav-link{
+            color: #f1f1f8;
+            font-size: 1.2rem;
+        }
+        .nav-link.active,
+        .nav-link:hover{
+            color: #00c9db;
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid #00c9db;
+        }
+    }
+}
+
+/*
+    4. ESTILOS A PREVIEW
+*/
+
+#preview{
+    background-image: url(../images/section-hero/hero-background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .imagen::after, 
+    .imagen::before{
+        content: '';
+        height: 4.5rem;
+        width: 4.5rem;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        display: block;
+        background-color: #00c9db;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(50%);
+    }
+
+    .imagen::before{
+        animation: border-luminoso 1500ms ease-in-out infinite;
+    }
+}
+
+.modal-content {
+        background-color: transparent!important; 
+        border: none!important; 
+        border-radius: 0!important; 
+}
+
+@keyframes border-luminoso{
+    0%{
+        transform: translateX(-50%) translateY(50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-50%) translateY(50%) translateZ(0) scale(1.6);
+        opacity: 0;
+    }
+}
+
+/*
+    5. ESTILOS PARA #details
+*/
+
+#details{
+    background-color: #262431;
+}
+
+
+/*
+    5. ESTILOS PARA #contact
+*/
+
+#contact{
+    background-color: #2f2c3d;
+    .fas{
+        color:#00c9db;
+    }
+    .form-control{
+        background-color: #413d52;
+        color: white;
+    }
+    .form-control:focus{
+        border: 1px solid #00c9db;
+        background-color: #413d52;
+        color: white;
+        box-shadow: none;
+    }
+}
+
+/*
+    6. ESTILOS PARA .pieDePagina
+*/
+
+.pieDePagina{
+    background-color: #262431;
+
+    .derechos{
+        background-color: #2f2c3d;
+    }
+
+    .social-media > div:hover{
+        background-color: white;
+    }
+
+}
+
+/*
+    X. MEDIA QUERYS
+*/
+
+//PARA EL VIDEO MODAL
+@media(min-width:425px){
+    .iframe-youtube-box {
+        width: 101% !important;
+    }
+}
+
+//CONTEXTO MD
+@media(min-width: 768px){
+    .navbar{
+        
+        li {
+            a{
+                padding: .4rem 1rem;   
+            }
+        }
+    }
+
+    .hero{
+        padding: 12rem 0;
+    }
+    
+    .iframe-youtube-box{
+        iframe{
+            width: 100%;
+            height: 315px;
+        }
+    }
+}
